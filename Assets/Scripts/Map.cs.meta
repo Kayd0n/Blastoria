@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 94f76ffa43ba93441930d4b6d9510271
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - destructibleBlockPrefab: {fileID: 3465282971265293649, guid: 6d35225180d733a4a9e64c89487574cf, type: 3}
+  - indestructibleBlockPrefab: {fileID: 6600319975508143735, guid: 5c89b6bfbdc41bd42885145efd064f8d, type: 3}
+  - spawnPointPrefab: {fileID: 5837236195008282708, guid: c6089168330775e4a9933b2d3538560b, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
