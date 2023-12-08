@@ -38,18 +38,21 @@ public class ExplosionBehaviour : MonoBehaviour
         for (int i = 0; i < force; ++i) {
             RaycastHit hit;
             if (Physics.Raycast(position, direction, out hit, (i + 1))) {
-                if (hit.collider.gameObject.tag == "indestructible_wall") {
+                if (hit.collider.gameObject.CompareTag("indestructible_wall")) {
                     Debug.Log("indestructible_wall at " + hit.collider.gameObject.transform.position);
                     break;
                 }
-                if (hit.collider.gameObject.tag == "wall") {
+                if (hit.collider.gameObject.CompareTag("wall")) {
                     Debug.Log("wall at " + hit.collider.gameObject.transform.position);
-                    ExplosionBehaviour.InstantiateExplosion(hit.collider.gameObject.transform.position);
+                    DestructibleBlock destructibleBlock = hit.collider.gameObject.GetComponent<DestructibleBlock>();
+                    if (destructibleBlock != null) {
+                        destructibleBlock.Explode();
+                    }
                     break;
                 }
                 Debug.Log("Something at " + hit.collider.gameObject.transform.position + " named " + hit.collider.gameObject.name);
             }
-            ExplosionBehaviour.InstantiateExplosion(position + direction * (i + 1));
+            ExplosionBehaviour.InstantiateExplosion(position + direction * (i + 2));
             Debug.Log("Nothing at " + (position + direction * (i + 1)));
             Debug.DrawRay(position, direction * (i + 1), Color.red, 10);
         }

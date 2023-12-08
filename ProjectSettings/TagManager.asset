@@ -4,10 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Explosion
   - Block
   - indestructible_wall
   - wall
+  - Explosion
   layers:
   - Default
   - TransparentFX
