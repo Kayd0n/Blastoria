@@ -120,4 +120,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerUpPrefab: {fileID: 0}
   powerUpChance: 0.3
-  onCollideTag: Explosion
